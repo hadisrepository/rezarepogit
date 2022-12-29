@@ -26,21 +26,20 @@ def get_context_data(self,**kwargs):
     context['add_to_cart_form']=AddToCartProductForm()
     return context
 def details(request):
-    #   response=None
-    #   url= "https://uat.driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles"
-    #   payload = "{\n\t\"registrationNumber\": \"AA19AAA\"\n}"
-    #   headers = {
-    #             'Content-Type': 'application/json',
-    #               'x-api-key': 'yqBj6UpOLH59bhVWyoAgLMDEhwwlic7uS8FQ8b80'
-                   
-    #            }
+      response=None
+      url= "https://uat.driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles"
+      payload = "{\n\t\"registrationNumber\": \"AA19AAA\"\n}"
+      headers = {
+                'Content-Type': 'application/json',
+                  'x-api-key': 'yqBj6UpOLH59bhVWyoAgLMDEhwwlic7uS8FQ8b80'
+                                 }
 
-    #   my_dict = requests.request("POST", url, headers=headers, data = payload)
-    #   info=my_dict.json() # 👉️ <class 'str'>
+      my_dict = requests.request("POST", url, headers=headers, data = payload)
+      info=my_dict.json() # 👉️ <class 'str'>
      
        
        
-    #   print(info["engineCapacity"])
+      print(info["engineCapacity"])
       return render( request,'services/cardetails.html')
 def step2(request):
 
